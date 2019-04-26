@@ -1,0 +1,16 @@
+{
+    "name": "softspring/extra-bundle",
+    "description": "Symfony extra utils",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "require-dev": {
+        "symfony/config": "^4.2",
+        "symfony/yaml": "^4.2",
+        "twig/twig": "^2.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Softspring\\ExtraBundle\\": ""
+        }
+    }
+}
