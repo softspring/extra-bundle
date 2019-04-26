@@ -20,7 +20,7 @@ class Configuration implements ConfigurationInterface
                             ->canBeEnabled()
                             ->addDefaultsIfNotSet()
                             ->children()
-                                ->booleanNode('enabled')->defaultTrue()->end()
+                                ->booleanNode('enabled')->defaultFalse()->end()
                             ->end()
                         ->end()
                     ->end()
