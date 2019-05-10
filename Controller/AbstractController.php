@@ -40,20 +40,22 @@ abstract class AbstractController extends SfAbstractController
     }
 
     /**
+     * @param string|null $name
      * @return EntityManagerInterface
      */
-    public function getEntityManager(): EntityManagerInterface
+    public function getEntityManager(?string $name): EntityManagerInterface
     {
-        return $this->getDoctrine()->getManager();
+        return $this->getDoctrine()->getManager($name);
     }
 
     /**
-     * @param string $className
+     * @param string      $className
+     * @param string|null $managerName
      * @return ObjectRepository
      */
-    public function getRepository(string $className): ObjectRepository
+    public function getRepository(string $className, ?string $managerName): ObjectRepository
     {
-        return $this->getEntityManager()->getRepository($className);
+        return $this->getEntityManager($managerName)->getRepository($className);
     }
 
     /**
