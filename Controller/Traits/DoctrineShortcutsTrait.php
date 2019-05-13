@@ -39,7 +39,7 @@ trait DoctrineShortcutsTrait
      * @param string|null $name
      * @return EntityManagerInterface
      */
-    public function getEntityManager(?string $name): EntityManagerInterface
+    public function getEntityManager(?string $name = null): EntityManagerInterface
     {
         return $this->getDoctrine()->getManager($name);
     }
@@ -49,7 +49,7 @@ trait DoctrineShortcutsTrait
      * @param string|null $managerName
      * @return ObjectRepository
      */
-    public function getRepository(string $className, ?string $managerName): ObjectRepository
+    public function getRepository(string $className, ?string $managerName = null): ObjectRepository
     {
         return $this->getEntityManager($managerName)->getRepository($className);
     }
