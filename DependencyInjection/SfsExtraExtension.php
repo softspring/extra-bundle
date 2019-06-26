@@ -21,5 +21,9 @@ class SfsExtraExtension extends Extension
         if ($config['twig']['active_for_routes_extension']['enabled']) {
             $loader->load('twig_active_for_routes_extension.yaml');
         }
+
+        if ($config['http']['catch_http_redirect_exception']['enabled']) {
+            $loader->load('catch_http_redirect_exception.yaml');
+        }
     }
 }

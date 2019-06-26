@@ -13,8 +13,10 @@ class Configuration implements ConfigurationInterface
         $rootNode = $treeBuilder->getRootNode();
 
         $rootNode
+            ->addDefaultsIfNotSet()
             ->children()
                 ->arrayNode('twig')
+                    ->addDefaultsIfNotSet()
                     ->children()
                         ->arrayNode('active_for_routes_extension')
                             ->canBeEnabled()
@@ -25,6 +27,19 @@ class Configuration implements ConfigurationInterface
                         ->end()
                     ->end()
                 ->end()
+                ->arrayNode('http')
+                    ->addDefaultsIfNotSet()
+                    ->children()
+                        ->arrayNode('catch_http_redirect_exception')
+                            ->canBeEnabled()
+                            ->addDefaultsIfNotSet()
+                            ->children()
+                                ->booleanNode('enabled')->defaultTrue()->end()
+                            ->end()
+                        ->end()
+                    ->end()
+                ->end()
+            ->end()
         ;
 
         return $treeBuilder;
