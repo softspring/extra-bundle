@@ -2,7 +2,6 @@
 
 namespace Softspring\ExtraBundle\Controller\Traits;
 
-use Doctrine\Common\Persistence\ManagerRegistry;
 use Doctrine\Common\Persistence\ObjectRepository;
 use Doctrine\ORM\EntityManagerInterface;
 
@@ -53,21 +52,5 @@ trait DoctrineShortcutsTrait
     public function getRepository(string $className, ?string $managerName = null): ObjectRepository
     {
         return $this->getEntityManager($managerName)->getRepository($className);
-    }
-
-    /**
-     * Shortcut to return the Doctrine Registry service.
-     *
-     * @throws \LogicException If DoctrineBundle is not available
-     *
-     * @final
-     */
-    protected function getDoctrine(): ManagerRegistry
-    {
-        if (!$this->container->has('doctrine')) {
-            throw new \LogicException('The DoctrineBundle is not registered in your application. Try running "composer require symfony/orm-pack".');
-        }
-
-        return $this->container->get('doctrine');
     }
 }
