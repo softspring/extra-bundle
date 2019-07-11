@@ -16,7 +16,7 @@ trait DispatchGetResponseTrait
      */
     protected function dispatchGetResponse(string $eventName, GetResponseEventInterface $event): ?Response
     {
-        $this->get('event_dispatcher')->dispatch($eventName, $event);
+        $this->get('event_dispatcher')->dispatch($event, $eventName);
 
         if ($event->getResponse()) {
             return $event->getResponse();
