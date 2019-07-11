@@ -3,8 +3,8 @@
 namespace Softspring\ExtraBundle\Controller\Traits;
 
 use Softspring\ExtraBundle\Event\GetResponseEventInterface;
-use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Contracts\EventDispatcher\Event;
 
 trait DispatchGetResponseTrait
 {
