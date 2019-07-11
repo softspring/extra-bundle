@@ -2,7 +2,7 @@
 
 namespace Softspring\ExtraBundle\Event;
 
-use Symfony\Component\EventDispatcher\Event;
+use Symfony\Contracts\EventDispatcher\Event;
 
 class GetResponseEvent extends Event implements GetResponseEventInterface
 {
