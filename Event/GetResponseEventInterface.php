@@ -4,6 +4,11 @@ namespace Softspring\ExtraBundle\Event;
 
 use Symfony\Component\HttpFoundation\Response;
 
+/**
+ * Interface GetResponseEventInterface
+ *
+ * @deprecated Use Softspring\CoreBundle\Event\GetResponseEventInterface
+ */
 interface GetResponseEventInterface
 {
     /**
