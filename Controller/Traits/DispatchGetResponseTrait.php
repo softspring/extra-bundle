@@ -2,10 +2,15 @@
 
 namespace Softspring\ExtraBundle\Controller\Traits;
 
-use Softspring\ExtraBundle\Event\GetResponseEventInterface;
+use Softspring\CoreBundle\Event\GetResponseEventInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Contracts\EventDispatcher\Event;
 
+/**
+ * Trait DispatchGetResponseTrait
+ *
+ * @deprecated Use Softspring\CoreBundle\Controller\Traits\DispatchGetResponseTrait instead
+ */
 trait DispatchGetResponseTrait
 {
     /**
