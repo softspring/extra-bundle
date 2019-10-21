@@ -6,6 +6,11 @@ use Softspring\ExtraBundle\Controller\Traits\DispatchGetResponseTrait;
 use Softspring\ExtraBundle\Controller\Traits\DoctrineShortcutsTrait;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController as SfAbstractController;
 
+/**
+ * Class AbstractController
+ *
+ * @deprecated Use Softspring\CoreBundle\Controller\AbstractController instead
+ */
 abstract class AbstractController extends SfAbstractController
 {
     use DispatchGetResponseTrait;
