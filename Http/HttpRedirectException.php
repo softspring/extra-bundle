@@ -5,6 +5,11 @@ namespace Softspring\ExtraBundle\Http;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
+/**
+ * Class HttpRedirectException
+ *
+ * @deprecated
+ */
 class HttpRedirectException extends HttpException
 {
     /**

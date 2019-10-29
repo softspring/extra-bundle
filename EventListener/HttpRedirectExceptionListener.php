@@ -7,6 +7,11 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\Event\ExceptionEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 
+/**
+ * Class HttpRedirectExceptionListener
+ *
+ * @deprecated
+ */
 class HttpRedirectExceptionListener implements EventSubscriberInterface
 {
     public static function getSubscribedEvents()

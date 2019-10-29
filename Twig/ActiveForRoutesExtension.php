@@ -6,6 +6,11 @@ use Symfony\Component\HttpFoundation\RequestStack;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 
+/**
+ * Class ActiveForRoutesExtension
+ *
+ * @deprecated
+ */
 class ActiveForRoutesExtension extends AbstractExtension
 {
     /**
